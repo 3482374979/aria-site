@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
 <title>Aria</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { margin: 0; font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; background: #fff; color: #111; }
-  @media (prefers-color-scheme: dark) { body { background: #000; color: #f2f2f7; } }
-  main { max-width: 640px; margin: 0 auto; padding: 64px 20px; }
-  h1 { font-size: 34px; margin: 0 0 8px; }
-  p { color: #6e6e73; margin: 0; }
-</style>
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="ko" href="ko/index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<script>
+(function(){
+  try {
+    var l = (navigator.languages && navigator.languages[0]) || navigator.language || "ko";
+    location.replace((/^ko/i.test(l) ? "ko" : "en") + "/index.html" + location.hash);
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
-<main>
-  <h1>Aria</h1>
-  <p>Lipson Inc.</p>
+<main class="doc">
+<h1>Aria</h1>
+<div class="langpick">
+<a href="ko/index.html" hreflang="ko" lang="ko">한국어</a>
+<a href="en/index.html" hreflang="en" lang="en">English</a>
+</div>
 </main>
 </body>
 </html>
