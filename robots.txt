@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://letsaria.com/sitemap.xml
+Sitemap: https://aria.lipson.kr/sitemap.xml
